@@ -7,12 +7,12 @@ workflows:
       groups:
         - app_store_credentials
       vars:
-        XCODE_WORKSPACE: 'PawtimeInteractive.xcworkspace' # <----
-        XCODE_SCHEME: 'PawtimeInteractive' # <----
-        BUNDLE_ID: 'com.PawtimeInteractive' # <----
-        APP_STORE_APP_ID: 6759305680 # <----
-        APP_STORE_CONNECT_KEY_ID: '8NK4LC589M' # <----
-        APP_STORE_CONNECT_ISSUER_ID: 'd3c70c16-5011-4ee7-85ec-d52cb607986f' # <----
+        XCODE_WORKSPACE: 'PawtimeInteractive.xcworkspace'
+        XCODE_SCHEME: 'PawtimeInteractive'
+        BUNDLE_ID: 'com.PawtimeInteractive'
+        APP_STORE_APP_ID: 6759984696
+        APP_STORE_CONNECT_KEY_ID: '8NK4LC589M'
+        APP_STORE_CONNECT_ISSUER_ID: 'd3c70c16-5011-4ee7-85ec-d52cb607986f'
         node: latest
         xcode: latest
         cocoapods: default

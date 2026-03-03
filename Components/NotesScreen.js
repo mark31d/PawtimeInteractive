@@ -530,7 +530,7 @@ const styles = StyleSheet.create({
   // Empty state
   emptyWrap: { alignItems: 'center', paddingTop: 60, paddingHorizontal: 24 },
   emptyTitle: { fontSize: 18, fontWeight: '700', color: COLORS.text, marginBottom: 8 },
-  emptyText: { fontSize: 14, color: COLORS.textMuted, textAlign: 'center', lineHeight: 22 },
+  emptyText: { fontSize: 14, color: COLORS.textSecondary, textAlign: 'center', lineHeight: 22 },
 
   // Date picker
   dateBtn: {

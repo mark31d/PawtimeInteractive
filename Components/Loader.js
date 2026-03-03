@@ -89,7 +89,7 @@ export default function Loader({ spinnerDuration = 8000, onDone }) {
             resizeMode="cover"
           />
         </View>
-        <Text style={styles.title}>PLAYТALECAT</Text>
+        <Text style={styles.title}>PAWTIME INTERACTIVE</Text>
         <Text style={styles.subtitle}>FOR ALL YOUR CAT NEEDS</Text>
         <View style={styles.spinnerWrap}>
           <WebView

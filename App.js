@@ -211,7 +211,7 @@ export default function App() {
                   animation: 'fade',
                   contentStyle: { backgroundColor: 'transparent' },
                 }}>
-                {!appState.onboardingDone ? (
+                {true ? (
                   <Stack.Screen
                     name="Onboarding"
                     component={OnboardingScreen}

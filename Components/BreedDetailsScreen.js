@@ -209,15 +209,17 @@ const styles = StyleSheet.create({
   },
   temperText: { fontSize: 12, color: COLORS.accent2, fontWeight: '600' },
 
-  // Image — edge-to-edge of the card (negative horizontal margins cancel card padding)
   imgWrap: {
-    marginHorizontal: -CARD_PADDING,
-    height: 300,
-    overflow: 'hidden',
+    height: 430,
+    marginHorizontal: 4,
     backgroundColor: COLORS.cardAlt,
     marginBottom: 16,
+    borderRadius: 20,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: COLORS.cardBorder,
   },
-  breedImg: { width: '100%', height: 300 },
+  breedImg: { width: '100%', height: 430 },
 
   description: {
     fontSize: 15,
