@@ -101,6 +101,7 @@ export const AppContext = createContext({
   state: DEFAULT_STATE,
   setState: () => {},
   resetAll: async () => {},
+  finishOnboarding: () => {},
 });
 
 export function useApp() {
@@ -142,6 +143,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   const [appState, setAppStateRaw] = useState(DEFAULT_STATE);
   const [booting, setBooting] = useState(true);
+  const [onboardingDone, setOnboardingDone] = useState(false);
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY)
@@ -192,7 +194,7 @@ export default function App() {
   }, []);
 
   return (
-    <AppContext.Provider value={{ state: appState, setState, resetAll }}>
+    <AppContext.Provider value={{ state: appState, setState, resetAll, finishOnboarding: () => setOnboardingDone(true) }}>
       <ImageBackground source={IMAGES.bg} style={{ flex: 1 }} resizeMode="cover">
         <GestureHandlerRootView style={{ flex: 1 }}>
           <SafeAreaProvider>
@@ -211,7 +213,7 @@ export default function App() {
                   animation: 'fade',
                   contentStyle: { backgroundColor: 'transparent' },
                 }}>
-                {true ? (
+                {!onboardingDone ? (
                   <Stack.Screen
                     name="Onboarding"
                     component={OnboardingScreen}

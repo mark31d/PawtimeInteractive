@@ -42,7 +42,7 @@ const SLIDES = [
 ];
 
 export default function OnboardingScreen() {
-  const { setState } = useApp();
+  const { finishOnboarding } = useApp();
   const [slide, setSlide] = useState(0);
   const fadeAnim = useRef(new Animated.Value(1)).current;
 
@@ -59,7 +59,7 @@ export default function OnboardingScreen() {
   };
 
   const finish = () => {
-    setState(prev => ({ ...prev, onboardingDone: true }));
+    finishOnboarding();
   };
 
   const current = SLIDES[slide];
