@@ -1,5 +1,5 @@
 // File: Components/CareGuidesScreen.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -178,6 +178,12 @@ function AccordionCard({ guide }) {
 
 export default function CareGuidesScreen() {
   const navigation = useNavigation();
+  const [guides, setGuides] = useState(null);
+  useEffect(() => {
+    setGuides(GUIDES);
+  }, []);
+
+  const items = guides.filter(g => g.key); // filter pinned for future feature
 
   return (
     <View style={styles.root}>
@@ -197,7 +203,7 @@ export default function CareGuidesScreen() {
       <ScrollView
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}>
-        {GUIDES.map(g => (
+        {items.map(g => (
           <AccordionCard key={g.key} guide={g} />
         ))}
       </ScrollView>
